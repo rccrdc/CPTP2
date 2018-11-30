@@ -1092,7 +1092,47 @@ The figure illustrates the locations of the cold core region, reaction zone, spr
 
 \subsection{Spray combustion in a Diesel reciprocating engine}
 
-TODO
+The goal is to develop predictive combustion models for diesel engines. Today, models are able to predict the \textit{ignition delay} including $NO$ and $soot$ emissions. Diesel combustion models can be classified into 2 groups:
+\begin{enumerate}
+    \item \textit{thermodynamic models}: aim to calculate the heat release rate according to a given pressure history
+    \item  \textit{multidimensional models}: are based on the evaluation of the fluid dynamic properties such as temporal and spatial variations, composition, pressure and turbulence. They are more predictive and can provide more fundamental information of the combustion phenomena
+\end{enumerate}
+
+\subsubsection{KIVA-II}
+
+KIVA-II is a program devoted to the numerical calculation of transient, 2 and 3-dimensional reactive fluid flows with sprays. A stochastic particle model is used to calculate evaporating liquid sprays, including the effects of droplet collisions.\\
+The in-cylinder dynamics of internal combustion engines involve complex physical and chemical processes. These include the transient 3-dimensional dynamics of evaporating fuel sprays, chemical reactions and heat transfer. The KIVA code has the ability to calculate such flows with arbitrarily shaped piston geometries and it solves the unsteady equations of motion of the reactive mixture coupled to the equations for a single component vaporizing fuel spray.\\
+The KIVA equations can be used to solve both laminar and turbulent flows which differ primarily in the form and magnitude of the transport coefficients (much larger in the turbulent case).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/kiva.png}
+\end{figure}
+
+The figures show the computed and measured cylinder pressure (left) and the computed and measured heat release (right) for a Caterpillar engine.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/grid.png}
+\end{figure}
+
+Perspective view (1/6 of the combustion chamber) of the computational grid and fuel droplet distribution.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/kiva2.png}
+\end{figure}
+
+In-cylinder gas temperature contours computed using different models (left), the wall impingement is visible. Comparison between computed emissions and measured engine-out data with varying fuel injection timing.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/kiva3.png}
+\end{figure}
+
+Effects of drop drag and wall impingement on the combustion process.
+
+\subsubsection{The spray model}
 
 
 
