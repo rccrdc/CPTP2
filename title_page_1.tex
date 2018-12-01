@@ -30,8 +30,8 @@
 
 Combustion is the development of chemical reactions of oxido-reduction, strongly exothermic and very fast, due to heat and catalyst products accumulation.
 \begin{itemize}
-    \item \textit{Diffusion flame}: the oxidizer combines with the fuel by diffusion. The flame speed is limited by the rate of dissusion
-    \item \textit{Premixed flame}: flame which develops when oxidizer and fuel at the exit of the burner are well mixed.
+    \item \textit{Diffusion flame}: the reactants diffuse into each other during the chemical reaction.
+    \item \textit{Premixed flame}: the reactants are perfectly mixed before chemical reaction.
 \end{itemize}
 
 \begin{figure}[h!]
@@ -1181,7 +1181,105 @@ The soot emission model, written in the Arrhenius single step form, considers th
 
 \subsection{Spray generation}
 
+Atomization is the process of conversion of the liquid fuel into small drops.\\ The aim is produce a high surface to mass ratio in the liquid phase in order to have a high evaporation rate. To this a high relative velocity between the liquid to be atomized and the sorrounding gas in needed which is what the \textit{pressure atomizers} and \textit{rotary atomizers} actually do. The \textit{airblast atomizers} instead eject a high velocity airstream on a slow liquid film. The Weber number provide a usel indication of both the quality and the nature of the atomization process.
+
+\subsubsection{Spray characteristics}
+
+\begin{itemize}
+    \item \textit{Mean drop size}: the idea is to replace a given spray with one in which the droplets have the same diameter, retaining the characteristics of the original spray.
+    \item \textit{Drop size distribution}: drop sizes range in diameter from $10$ to $400 \mu m$.
+    \item  \textit{Patternation}: the uniformity of the circumferentual distribution of fuel in a conical spray. Poor patternation affects pollutants emission.
+    \item \textit{Cone angle}: if the cone angle is narrow, drops are evenly dispersed through the entire spray (\textit{solid spray}). With swirl atomizers, a hollow conical structure of the spray is obtained allowing a better exposure to the sorrounding air.
+    \item \textit{Dispersion}: the ratio of the volume of the spray to the volume of the fuel contained with it. A good dispersion allows a good mixing of the fuel with the surrounding gas, with an increase in the evaporation rate and heat release.
+    \item \textit{Penetration}: maximum distance the spray reaches when injected in stagnant air. It is governed by the kinetic energy and the aerodynamic resistance. Compact narrow spray has high penetration. The penetration of a spray is greater than that of a single drop since the gas offers less resistance to the following drops which penetrate further.
+\end{itemize}
+
+\subsubsection{Simplex atomizer}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/simplex.png}
+\end{figure}
+
+It is a pressure-swirl atomizer. The fuel is fed into a swirl chamber through tangential ports that give the fuel a high angular velocity. The rotating fluid flows through the orifice in the form of a hollo conical sheet. As the air pressure increases, the size distribution is shifted toward smaller drop diameters. The major drawback is that the flow rate varies as the square root of the pressure differential. Therefore, doubling the fuel flow rate requerise fourfold increase in pressure.
+
+\subsubsection{Duplex atomizer}
+
+The drawback of the simplex atomizer has led to the development of wide range atomizers such as \textit{duplex}, \textit{dual-orifice} and \textit{spill} atomizers.\\
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/duplex.png}
+\end{figure}
+
+Two simplex nozzles are fitted concentrically, one inside the other. At low fuel flow all the fuel is supplied from the pilot nozzle, when the fuel pressure reaches a fixed value, the pressurising valve opens and admits fuel to the main nozzle.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/spill.png}
+\end{figure}
+
+The spill atomizer is a simplex atomizer but with a passage through which fuel can be spilled away from the atomizer. There is a constant use of a high pressure meaning that at low fuel flows the swirl is adequate to provide an efficient atomization of the fuel.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/rotary.png}
+\end{figure}
+
+In the rotary atomizer the fuel is fed into a rotating surface where it spreads out under the action of centrifugal force.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/airblast.png}
+\end{figure}
+
+The airblast atomizer improve the atomization by prefilming the fuel and introducing air at high speed.
+
+\newpage
+
+\section{Reacting boundary layer}
+
 TODO
+
+\newpage
+
+\section{Supersonic combustion and detonation}
+
+In the study of detonation attention will be concentrated on the premixed flame. Reactions of the premixed gases are generally divided into three categories:
+
+\begin{itemize}
+    \item \textit{explosion}: the rate of heat generation is extremely fast, but it does not require the passage of a combustion wave through the exploding mixture
+    \item \textit{deflagration}: the combustion wave propagates at subsonic speed
+    \item \textit{detonation}: the combustion wave propagates at supersonic speed
+\end{itemize}
+
+Flames in combustibile gas mixture in tubes reaches enourmous velocities (~$3500 m/s$). Detonation waves are shock waves which are sustained by the energy of the chemical reaction that is initiated by the shock compression. Their rate of propagation is limited by the rate at which a shock wave can travel.
+
+\subsection{Shock wave in a neutral gas}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
