@@ -1106,7 +1106,7 @@ The KIVA equations can be used to solve both laminar and turbulent flows which d
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/kiva.png}
+\includegraphics[width=0.6\textwidth]{figures/kiva.png}
 \end{figure}
 
 The figures show the computed and measured cylinder pressure (left) and the computed and measured heat release (right) for a Caterpillar engine.
@@ -1120,30 +1120,68 @@ Perspective view (1/6 of the combustion chamber) of the computational grid and f
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.4\textwidth]{figures/kiva2.png}
+\includegraphics[width=0.6\textwidth]{figures/kiva2.png}
 \end{figure}
 
 In-cylinder gas temperature contours computed using different models (left), the wall impingement is visible. Comparison between computed emissions and measured engine-out data with varying fuel injection timing.
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.4\textwidth]{figures/kiva3.png}
+\includegraphics[width=0.5\textwidth]{figures/kiva3.png}
 \end{figure}
 
 Effects of drop drag and wall impingement on the combustion process.
 
 \subsubsection{The spray model}
 
+The spray model is a \textit{wave breakup model}, which take into account the wall impingement effects and drop drag varying coefficients. The fuel drop are injected with the size queal to the nozzle hole diameter and the number of drop is determined fromthe fuel flow rate. The mass of new droplets formed due to breakup is subtracted from the parent drop.\\
+The high injection pressure in diesel engines produces a very high spray drop velocity with respect to the surrounfìding gas. Therefore the drop is subjected to high inertial forces which distort the drop into a disk shape. In order to model the trajectory of the drops, the drag coefficient must take into account this shape distortion since a distorted drop has a higher drag coefficient than a spherical drop.\\
+Spray wall impingement is important since the impact of a drop on a heated surface may lead to its istantaneous vaporization or sliding and rebounding of a distorted drop (only the latter is modeled).
 
+\subsubsection{The turbulence model}
 
+The model is called \textit{RNG k-$\epsilon$}, an extra term is added to the dissipation equation which changes with the mean strain rate.
+$k$ is the turbulent kinetic energy and $\epsilon$ is the dissipation rate:
+\begin{equation}
+    \frac{\partial \rho k}{\partial t}+\nabla\cdot(\rho u k)=...
+\end{equation}
+\begin{equation}
+    \frac{\partial\rho\epsilon}{\partial t}+\nabla\cdot(\rho u \epsilon)=...
+\end{equation}
 
+\subsubsection{The ignition model}
 
+A multistep kinetics model is adopted as the ignition model. The premise of the model is that \textit{degenerate branching} plays an important role in determining the cool flame and 2-stage ignition phenomena that are observed during the autoignition of hydrocarbon fuels.
 
+\subsubsection{The combustion model}
 
+This model is combind with the igniton model to simulate the overall combustion process in a diesel engine. The criterion to combine the ignition and combustion model is to switch between the models at $1000 K$. The igniton model is used when the temperature is lower than $1000 K$ to simulate the low temperature chemistry and viceversa. With this combustion model, the time rate of change of the partial density of species $m$ due to conversion from one chemical species to another, is given by:
+\begin{equation}
+    \frac{dY{m}}{dt}=-\frac{Y_{m}-Y_{m}^{*}}{\tau_{c}}
+\end{equation}
+where $Y_{m}$ is the mass fraction of species $m$, $Y_{m}^{*}$ is the local equilibrium value of the mass fraction and $\tau_{c}$ is the characteristic time to achieve such equilibrium. An important aspect to this model is to formulate appropiately the characteristic time $\tau_{c}$ which is the sum of a laminar timescale and a turbulent timescale:
+\begin{equation}
+    \tau_{c}=\tau_{l}+f\tau_{t}
+\end{equation}
+where the \textit{delay coefficient $f$} determines the controlling role of turbulent effects.
 
+\subsubsection{The emission model}
 
+The extended \textit{Zel'dovich mechanism} is implemented to describe the $NO$ formartion. $NOx$ was found to be very sensitive to small changes in the computed gas temperature field. In order to obtain quantitative comparisons with experiments, a calibration factor $\beta$ is introduced:
 
+\begin{equation}
+    \bigg(\frac{dNO}{dt}\bigg)_{predicted}=\beta \bigg(\frac{dNO}{dt}\bigg)_{Zel'dovich}
+\end{equation}
 
+The soot emission model, written in the Arrhenius single step form, considers the rate of change of soot mass equal to the rate of formation less the rate of oxidation:
+
+\begin{equation}
+    \frac{dM_{soot}}{dt}= \frac{dM_{form}}{dt}- \frac{dM_{oxid}}{dt}
+\end{equation}
+
+\subsection{Spray generation}
+
+TODO
 
 
 \end{document}
