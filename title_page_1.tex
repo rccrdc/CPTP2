@@ -1157,7 +1157,7 @@ A multistep kinetics model is adopted as the ignition model. The premise of the 
 
 This model is combind with the igniton model to simulate the overall combustion process in a diesel engine. The criterion to combine the ignition and combustion model is to switch between the models at $1000 K$. The igniton model is used when the temperature is lower than $1000 K$ to simulate the low temperature chemistry and viceversa. With this combustion model, the time rate of change of the partial density of species $m$ due to conversion from one chemical species to another, is given by:
 \begin{equation}
-    \frac{dY{m}}{dt}=-\frac{Y_{m}-Y_{m}^{*}}{\tau_{c}}
+    \frac{dY_{m}}{dt}=-\frac{Y_{m}-Y_{m}^{*}}{\tau_{c}}
 \end{equation}
 where $Y_{m}$ is the mass fraction of species $m$, $Y_{m}^{*}$ is the local equilibrium value of the mass fraction and $\tau_{c}$ is the characteristic time to achieve such equilibrium. An important aspect to this model is to formulate appropiately the characteristic time $\tau_{c}$ which is the sum of a laminar timescale and a turbulent timescale:
 \begin{equation}
@@ -1205,11 +1205,11 @@ It is a pressure-swirl atomizer. The fuel is fed into a swirl chamber through ta
 
 \subsubsection{Duplex atomizer}
 
-The drawback of the simplex atomizer has led to the development of wide range atomizers such as \textit{duplex}, \textit{dual-orifice} and \textit{spill} atomizers.\\
+The drawback of the simplex atomizer has led to the development of wide range atomizers such as \textit{duplex}, \textit{dual orifice} and \textit{spill} atomizers.\\
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/duplex.png}
+\includegraphics[width=0.8\textwidth]{figures/duplex.png}
 \end{figure}
 
 Two simplex nozzles are fitted concentrically, one inside the other. At low fuel flow all the fuel is supplied from the pilot nozzle, when the fuel pressure reaches a fixed value, the pressurising valve opens and admits fuel to the main nozzle.
@@ -1220,13 +1220,7 @@ Two simplex nozzles are fitted concentrically, one inside the other. At low fuel
 \end{figure}
 
 The spill atomizer is a simplex atomizer but with a passage through which fuel can be spilled away from the atomizer. There is a constant use of a high pressure meaning that at low fuel flows the swirl is adequate to provide an efficient atomization of the fuel.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.5\textwidth]{figures/rotary.png}
-\end{figure}
-
-In the rotary atomizer the fuel is fed into a rotating surface where it spreads out under the action of centrifugal force.
+//In the rotary atomizer the fuel is fed into a rotating surface where it spreads out under the action of centrifugal force.
 
 \begin{figure}[h!]
 \centering
@@ -1257,13 +1251,34 @@ Flames in combustibile gas mixture in tubes reaches enourmous velocities (~$3500
 
 \subsection{Shock wave in a neutral gas}
 
+Consider a long tube closed at the left by a piston. A small velocity $dw$ is imparted to the piston, this movement produces in the gas a weak compression wave that travels from left to roght with the velocity of sound. The gas to the right of the wave front is at rest, while the gas between the wave front and the piston is compressed adiabatically by $dp$ and has the velocity $dw$. Then, the velocity of the piston is increased by another $dw$, a second compression wave is produced in the gas. By ripetition of this procedure the velocity of the piston is brought to the final velocity $w$.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/airblast.png}
+\end{figure}
 
+A step-like set of waves is produced. The upper steps of the terrace have greater velocity than the lower steps since the temperature and theredore the velocity of sound is larger in the gas in the upper steps. As soon as the steps are merged, a shock wave with very high steep pressure gradient is formed. After the piston has attained its constant velocity $w$, the column of gas is pushed ahead at the same velocity $w$. Work must constantly be performed by the piston in order to mantain the motion.\\
+Consider a coordinate system moving with the wave front. Since the process is stationary, the masses, momenta and energies are constant:
 
+\begin{equation}
+    \frac{u_{1}}{v_{1}} =  \frac{u_{2}}{v_{2}}
+\end{equation}
 
+\begin{equation}
+    \frac{u_{1}_{2}}{v_{1}} + p_{1} =  \frac{u_{2}^{2}}{v_{2}} + p_{2}
+\end{equation}
 
+\begin{equation}
+    E_{1} + \frac{u_{1}_{2}}{2} + p_{1}v_{1} = E_{2} + \frac{u_{2}_{2}}{2} + p_{2}v_{2}
+\end{equation}
 
+The equations represent the conservation of mass, momentum and energy.\\
+The velocity of propagation $D$ of the shock wave into the gas at rest is found to be:
 
+\begin{equation}
+    D = u_{1} = v_{1}\sqrt{\frac{p_{2}-p_{1}}{v_{1}-v_{2}}}
+\end{equation}
 
 
 
