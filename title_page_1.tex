@@ -1233,7 +1233,91 @@ The airblast atomizer improve the atomization by prefilming the fuel and introdu
 
 \section{Reacting boundary layer}
 
-TODO
+A boundary layer is defined as the flow region of moving fluid in qhich shear stresses, heat fluxes and mass diffusion fluxes are significant only in the direction normal to the direction of flow (they don't require the presence of solid walls).Chemical reaction can develop in a geseous phase or in form of heterogeneous reactions at the surface.
+The boundary layer flow can be laminar or turbulent, stationary or nonstationary, single-phase or multiphase. The free current flow may be subsonic, transonic, supersonic or hypersonic.
+
+\subsection{The governing equations}
+
+The governing partial differential equations for chemically reacting boundary layers are derived from conservation equations. Order of magnitude analysis is used for the simplification of equations (5 + N variables).\\
+The thickness of the boundary layer is assumed to be much smaller than the plate length ($x/L<<1$) and the approximation states:
+\begin{equation}
+    \frac{\partial u}{\partial x} ~ \frac{u}{L}
+\end{equation}
+
+\begin{equation}
+    \frac{\partial u}{\partial y} ~ \frac{u}{\delta}
+\end{equation}
+
+The continuity equation and the momentum equation for the steady 2-dimensional boundary layer are written as:
+
+\begin{equation}
+    \frac{\partial (\rho u)}{\partial x} + \frac{\partial (\rho v)}{\partial y} = 0
+\end{equation}
+
+\begin{equation}
+    u \frac{\partial u}{\partial x} +  v \frac{\partial u}{\partial y} = - \frac{1}{\rho}\frac{\partial p}{\partial x} + \frac{1}{\rho} \frac{\partial}{\partial y}\bigg( \mu \frac{\partial u}{\partial y} \bigg)
+\end{equation}
+
+The dimplified balance equation for the \textit{ith} species can be written as:
+
+\begin{equation}
+    \rho \bigg(u \frac{\partial Y_{i}}{\partial x} +  v \frac{\partial Y_{i}}{\partial y} \bigg) - \frac{\partial}{\partial y} \bigg( \rho \mathcal{D_{i}} \frac{\partial Y_{i}}{\partial y} \bigg) = \omega_{i}
+\end{equation}
+
+If the body force and radiation is neglected, the nergy equation in terms of enthalpy becomes:
+
+\begin{equation}
+    \rho \bigg(u \frac{\partial h}{\partial x} +  v \frac{\partial h}{\partial y} \bigg) = u \frac{\partial p}{\partial x} - \frac{\partial q_{y}}{\partial y} + \mu \bigg(\frac{\partial u}{\partial y} \bigg)^{2}
+\end{equation}
+
+where enthalpy includes the chemical energy
+
+\begin{equation}
+    h = \sum_{i=1}^{N} Y_{i}h{i}
+\end{equation}
+and
+\begin{equation}
+    h_{i} = \int_{T_{0}}^{T} C_{p,i}dT + \Delta h_{f,i}^{0}
+\end{equation}
+
+\subsection{The model for the reacting turbulent boundary layer}
+
+In the following set of equations for the axisymmetric flows $m=1$, whereas fot planar flows $m=0$ and the variable $r$ is replaced by $y$.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/turbulent.png}
+\end{figure}
+
+\subsection{Governing equations for the inviscid region}
+
+For the potential flow regionsm assuming a planar flow at freestream boundary, the following system of equations are considered:
+
+\begin{equation}
+    \Tilde{u} = U_{\infty}, \;\;\; \Tilde{T}=T_{\infty}
+\end{equation}
+\begin{equation}
+    \frac{\partial \Tilde{Y}_{F}}{\partial y} =  \frac{\partial \Tilde{Y}_{0}}{\partial y} = 0
+\end{equation}
+\begin{equation}
+    \frac{\partial k}{\partial y} = \frac{\partial \epsilon}{\partial y} = 0
+\end{equation}
+
+\subsection{Modeling of the gas-phase chemical reactions}
+
+The term $\dot{omega}$ must be known in order to solve the system of equations with appropiate boundary conditions. In the following, a reacting turbulent boundary layer flow is considered over solid fuel. The chemical reactions of the pyrolysed gaseous reactants emitted by the solid surface are translated into a single irreversible chemical reaction:
+
+\begin{equation}
+    v_{F}F + v_{o}O \rightarrow v_{P}P
+\end{equation}
+
+Using the Arrhenius law implies some difficulties in the time averaging of the resulting exponential expression. This suggest an alternative approach know as \textit{eddy-breakup model} (EBU). From such a model, the following expression for $\dot{\omega}_{F}$ is obtained:
+
+\begin{equation}
+    \dot{\omega}_{F} = -C_{\dot{\omega}}\rho \sqrt{k} \bigg| \frac{\partial \Tilde{Y}_{F}}{\partial r}\bigg|
+\end{equation}
+
+where $C_{\dot{\omega}}$ is a constant.
 
 \newpage
 
@@ -1266,11 +1350,11 @@ Consider a coordinate system moving with the wave front. Since the process is st
 \end{equation}
 
 \begin{equation}
-    \frac{u_{1}_{2}}{v_{1}} + p_{1} =  \frac{u_{2}^{2}}{v_{2}} + p_{2}
+    \frac{u_{1}^{2}}{v_{1}} + p_{1} =  \frac{u_{2}^{2}}{v_{2}} + p_{2}
 \end{equation}
 
 \begin{equation}
-    E_{1} + \frac{u_{1}_{2}}{2} + p_{1}v_{1} = E_{2} + \frac{u_{2}_{2}}{2} + p_{2}v_{2}
+    E_{1} + \frac{u_{1}^{2}}{2} + p_{1}v_{1} = E_{2} + \frac{u_{2}^{2}}{2} + p_{2}v_{2}
 \end{equation}
 
 The equations represent the conservation of mass, momentum and energy.\\
@@ -1280,9 +1364,45 @@ The velocity of propagation $D$ of the shock wave into the gas at rest is found 
     D = u_{1} = v_{1}\sqrt{\frac{p_{2}-p_{1}}{v_{1}-v_{2}}}
 \end{equation}
 
+and the velocity $w$ of the gas behind the wave (particle velocity) is
 
+\begin{equation}
+    w=u_{1}-u_{2}= (v_{1}-v_{2})\sqrt{\frac{p_{2}-p_{1}}{v_{1}-v_{2}}}
+\end{equation}
 
+\subsection{The detonation wave}
 
+We now consider a shock wave traveling in combustible gas. Plane $1$ lies in the unburned gas and plane $2$ in the burned gas. The previous set of equation are valid, however the energy difference represent only the change in internal energy caused by compression, whereas now the temperature of the gas passing through plane 2 has been increased due to energy $\Delta E_{c}$ in the reaction:
+
+\begin{equation}
+    \Delta E = C_{v}(T_{2}-T{1}) - \Delta E_{c}
+\end{equation}
+
+\subsection{The Rankine-Hugoniot curve}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/rankine.png}
+\end{figure}
+
+It is essentialy a plot of all possible valies of $1/\rho_{2}$ and $p_{2}$ for a given value of $1/\rho_{2}$, $p_{2}$ and $q$. The point $1/\rho_{2}$ is called the origin. Regions of possible solutions are constructed by drawing tangents to the curve through the point A, and the curve is divided into five regions. The two tangent points to the curve are called \textit{C-J points}. It must be noted that although the curve represents all the possible solutions of the Hugonoit equation (energy eq.), not all the solutions are valid since in the region V the line implies that $u$ is imaginary (physically impossible region).
+
+\subsection{Deflagration detonation comparison}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/defla.png}
+\end{figure}
+
+All the possible values to compute the equations are found in tables, including the limits of detonability (in per cent fuel).
+
+\newpage
+
+\section{Fuels and propellants}
+
+TODO
+
+\newpage
 
 
 
