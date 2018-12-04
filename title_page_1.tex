@@ -1642,12 +1642,105 @@ The first is the most significant mechanism. $NO$ thermal is produce through the
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/pollutants.png}
+\includegraphics[width=0.8\textwidth]{figures/pollutants.png}
 \end{figure}
 
 \newpage
 
 \section{Combustion in air-breathing engines: gas turbines}
+
+The design of a combustion chamber aims to reduce the size of the chamber, completing all the processes occuring:
+\begin{itemize}
+    \item injection of the liquid
+    \item fuel atomization
+    \item fuel vaporization
+    \item mixing of fuel vapor with the air
+    \item development and completion of chemical reactions
+\end{itemize}
+ In order to keep the engine size small, the intensity of combustion is usually very high $(500000 KJ/(m^{3}s))$.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/gaschamber.png}
+\end{figure}
+
+Chemical reactions are confined to the interior of a perforated liner . The air flow moving between the liner and the casing keeps the metal cool enough to mantain its mechanical properties.\\
+High turbulence is needed for intense combustion. This causes a considerable pressure drop.
+
+\subsection{Approximate calculation of mixture ratio}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/mixturetable.png}
+\end{figure}
+
+Approaching the turbojet combustion as a heating process, we can write:
+\begin{equation}
+    \dot{m}_{f}\Delta H_{r} = \dot{m}_{a}C_{p}(T_{04}-T_{03}) \rightarrow f = \frac{\dot{m}_{f}}{\dot{m}_{a}} = \frac{C_{p}(T_{04}-T_{03})}{\Delta H_{r}}
+\end{equation}
+Normal value of the mixture ratio (0.025) are lower than the respective stoichiometric ratio. This is due to prevent the high temperature at the exit of the combustion chamber.\\
+The required value of f would lead to a mixture too lean for ignition and combustion. For this reasin the fuel, is initially mixed and burned with a small amount of primary air.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/airdistribution.png}
+\end{figure}
+
+The primary zone is fed by ~20\% of the airflow, about 12\% of the air passes through the swirling vanes that sorround the central fuel spray nozzle. The entering flow is designed to create a large swirl so that the pressure is low on chamber axis (radial gradient) creating recirculation. Most of the air is used for diluting the combustion products in order to reduce the combustion temperature.
+
+\subsection{Flame}
+
+In this figure it is possible to see the trend of the adiabatic flame temperature vs $\phi$. The pressure dependence is a result of dissociation (larger at lower pressure). Dissociation reduced the maximum temperature reachable.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/tvsphi.png}
+\end{figure}
+
+The jet engine performance is strongly dependent on the mass flow rate per unit cross-sectional area. A large area for a given flow implies large engines mass, large volume and large drag. For this, the fluid velocity has to be as high as possible, avoiding losses due to friction. The chamber is responsible for a limitation, due to the need to mantain a stationary flame within a moving stream. The flame remains stationary when the speed of the flame is equal to the mixture velocity. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/flame1.png}
+\end{figure}
+
+The perforated plate generates enough turbulence to make flame speed an order of magnitude greater than for laminar flow. In the figure is also evident the need of initial burning in primary zone for lean mixtures.\\
+The average axial velocity of the reactants in the combustion chamber is about $30 m/s$. The velocity of a laminar flame is $1 m/s$, turbulence can raise the burning velocity to $8 m/s$, in this condition the flame cannot have a stable position. The combustion chamber design has to provide zones of low velocity in which the flame can propagate in the unburned mixture (recirculation zones). At sea-level pressure in high enough that reaction rates are faster than turbulent mixing rates. At high altitude, reaction rates are slower than turbulent mixing rates, combustion may be incomplete.\\
+The mass flow rate in the combustion chamber is proportional to the pressure, while the chemical reaction rate is proportional to $~p^{2}$. Going from sea level to $12000 m$ altitude, the flow of reactants is ~$11\%$ of the sea-level value and the chemical reaction rate is $1.6\%$ of its sea level value. Therefore, at altitude, the chemical reaction rate become the limiting factor.
+
+\subsection{Atomization}
+
+It is the process of conversion of the liquid fuel into small drops. The aim is to produce a high surface to mass ratio in the liquid phase, in order to have high evaporation rate. To do this a high relative velocity between the liquid to be atomized and the air is needed:
+\begin{itemize}
+    \item pressure and rotary atomizers: ejection of the liquid at high velocity
+    \item airblast atomizers: ejection of a high velocity airstream on a slow liquid film
+\end{itemize}
+
+\subsection{Ignition system}
+
+Need of an easy and reliable light-up during ground starting and also relighting if the combustion chamber after a flameout in flight. The ignition performance is affected by fuel properties through concentration of the fuel vapor. Effects of volatility on evaporation rates, viscosity and the mean drop size are also important.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/ignitionloop.png}
+\end{figure}
+
+The ignition performance of an engine is usually expressed in terms of the range of flight conditions over which combustion can be restablished after a flameout at altitude (ignition loop diagram).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/flameholder.png}
+\end{figure}
+
+The figure shows the performance of a bluff body as a flameholder. Flame velocity is $u_{f}$ and mixture velocity is $u_{m}$ ($u_{f}<u_{m}$). If the intermittent spark is replaced by a continuous spark, a canonical region of combusted products is the result. The result is the recirculation of hot and combusting gases in the wake that allows to mantain a stationary flame within a stream with greater velocity than the flame speed. The lenght of the combustion chamber can be reduced by increasing the number of flameholders but the stagnation pressure losses increase.
+
+\newpage
+
+\section{Combustion in air-breathing engines: scramjet}
+
+TODO
+
+
 
 
 
