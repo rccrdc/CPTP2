@@ -1729,7 +1729,7 @@ The ignition performance of an engine is usually expressed in terms of the range
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/flameholder.png}
+\includegraphics[width=0.8\textwidth]{figures/flameholder.png}
 \end{figure}
 
 The figure shows the performance of a bluff body as a flameholder. Flame velocity is $u_{f}$ and mixture velocity is $u_{m}$ ($u_{f}<u_{m}$). If the intermittent spark is replaced by a continuous spark, a canonical region of combusted products is the result. The result is the recirculation of hot and combusting gases in the wake that allows to mantain a stationary flame within a stream with greater velocity than the flame speed. The lenght of the combustion chamber can be reduced by increasing the number of flameholders but the stagnation pressure losses increase.
@@ -1738,11 +1738,81 @@ The figure shows the performance of a bluff body as a flameholder. Flame velocit
 
 \section{Combustion in air-breathing engines: scramjet}
 
+This engine, which does not use rotating parts, will power vehicles at very high speed (hypersonic speeds, $M>5$). A sramjet propulsion system is a hypersonic air-breathing engine in which heat addition, due to combustion of fuel and air, occurs in the flow that is supersonic relative to the engine. Scramjet engines are able to make the transition between ramjet and scramjet operation.\\
+In a ramjet engine, the incoming supersonic aiflow is decelerated to subsonic speeds by means of multi-shock intake system and diffusion process. Fuel is added to the subsonic airflow, the mixture combusts and then reaccelerates to supersonic speeds. Instead, the airflow in a pure scramjet remains supersonic throughout the combustion process. Crossover points between ramjet and scramjet operation indicate the benefits of operating in ramjet until Mach 5-6. For speeds greater than Mach 6, the combustion is supersonic (scramjet) due to limitation of engine structural integrity (very high pressure by flow deceleration at subsonic speeds).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/ramjetcomp.png}
+\end{figure}
+
+A close integration engine/vehicle is observed for a propulsion system with a scramjet. The engine occupies the entire lower surface of the vehicle body. It consists of 5 major engine components: \textit{internal inlet, isolator, combustor, internal noozzle and the fuel supply subsystem}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/scramjetengine.png}
+\end{figure}
+
+\subsection{Ramjet vs Scramjet}
+
+Engine layout comparison between ramjet and scramjet:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/ramvsscra.png}
+\end{figure}
+
+\subsection{Internal inlet physics}
+
+The primary purpose of the high speed air induction system is to capture and compress air for processing by the remaining components of the engine. For vehicles flying at high supersonic speeds, adequate compression can be achieved without a mechanical compressor. The forebody provides the initial external compression and contributes to the drag and moments of the vehicle. The air in the captured stream tube undergoes a reduction in Mach number with an increase in pressure and temperature as it passes through the system of shock waves.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/scram2.png}
+\end{figure}
+
+\subsection{Isolator and combustor physics}
+
+The isolator allows supersonic flow to adjust to a static pressure higher than its inlet static pressure. The isolator cross-sectional area is constant or slightly divergent to accomodate boundary layer separation. When the combustion begins to separate the boundary layer, a pre-combustion shock forms. The shock structure or train allows the required pressure rise to occur over a finite distance, isolating the combustion from the inlet compression process, thus acting to prevent inlet unstart. The required length to capture the pressure rise is defined as the isolator length. The isolator in a dual mode ramjet and scramjet is a critical component that enables the combustor to capture the induced combustor pressure rise without inlet unstart and facilitate the engine to transition to scramjet operation.
+
+\subsection{Nozzle}
+
+The expansion system, consisting of the internal nozzle and vehicle aftbody, completes the propulsion path to produce thrust. The design of the nozzle has a major effect in the efficiency of the propulsion system and the vehicle due to its ability to influence vehicle pitching moment and lift.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/scramnozzle.png}
+\end{figure}
+
+\subsection{Dual mode}
+
+As the scramjet powered vehicle accelerates along its flight trajectory from Mach 3 to 8, the scramjet engine operates as a dual-mode ramjet in the Mach 3 to 6 regime along the isolator capability limit to avoid inlet unstart and remain within the structural limits.\\
+There is an inevitable transition region from Mach 5 to 7 in which neither ramjet nor scramjet operation is sufficient to describe the internal flow. The total temperature begins to decrease along with the pressure rise produced by the combustion. Consequently, a weaker pre-combustion system is required and the pre-combustion shock is pulled back from the throat towards the entrance. Operation in this critical regime is referred to as dual-mode scramjet, implying mixed characteristics of both subsonic and supersonic flow.\\
+As the vehicle continues to accelerate beyond Mach 7, the combustion process is unable to separate the flow and the engine operates in scramjet mode with a shock-free isolator. The inlet shocks propagate through the entire engine. The scramjet operational line and isolator phenomena during mode transition are illustrated in the following figure:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/dualmode.png}
+\end{figure}
+
+\subsection{Fuel injection}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/injescram.png}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/inje2.png}
+\end{figure}
+
+\subsection{Fuel choice}
+Fuel choice between hydrocarbon and hydrogen is typically driven by heat-sink requirements. Missiles may use hydrocarbon fuels for their volumetric energy density. Long range aircraft tend toward hydrogen because it has superior energy release per kg of fuel and heat absorption capability.
+
+\subsection{Combined cycles}
+
 TODO
-
-
-
-
 
 
 
