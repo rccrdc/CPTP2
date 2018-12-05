@@ -1783,7 +1783,7 @@ The expansion system, consisting of the internal nozzle and vehicle aftbody, com
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/scramnozzle.png}
+\includegraphics[width=0.5\textwidth]{figures/scramnozzle.png}
 \end{figure}
 
 \subsection{Dual mode}
@@ -1797,6 +1797,10 @@ As the vehicle continues to accelerate beyond Mach 7, the combustion process is 
 \includegraphics[width=0.8\textwidth]{figures/dualmode.png}
 \end{figure}
 
+\subsection{Fuel choice}
+
+Fuel choice between hydrocarbon and hydrogen is typically driven by heat-sink requirements. Missiles may use hydrocarbon fuels for their volumetric energy density. Long range aircraft tend toward hydrogen because it has superior energy release per kg of fuel and heat absorption capability.
+
 \subsection{Fuel injection}
 
 Fuel injectot in scramjet enginee is a diffcult task to accomplish. The major challenges are accomplishing stable, efficient, mixing and combustion in a supersonic flow. The subsonic flow withon ramjets allow sufficient time for fuel to mix. However, at supersonic sppeds encounteres within sramjet the residence time of any fluid particle is on order of $10^{-3}$ seconds. Low pressure zones created by ramps and cavities internal to the combustor have been effective at flame holding but the also may contribute to pressure losses.
@@ -1808,13 +1812,9 @@ Fuel injectot in scramjet enginee is a diffcult task to accomplish. The major ch
 
 Injection of fuel at the base of a low degree ramp is a good technique since it creates recirculation.
 
-\subsection{Fuel choice}
-
-Fuel choice between hydrocarbon and hydrogen is typically driven by heat-sink requirements. Missiles may use hydrocarbon fuels for their volumetric energy density. Long range aircraft tend toward hydrogen because it has superior energy release per kg of fuel and heat absorption capability.
-
 \subsection{Combined cycles}
 
-Air-breathing combined cycle engines are intended primarily for missions involving high-speed cruise in the atmosphere, but cannor support transatmospheric flight when air density becomes too low to sustain the cycle. They are tipically referred as rocket-based combined-cycle engines($\textit{RBCC}$).
+Air-breathing combined cycle engines are intended primarily for missions involving high-speed cruise in the atmosphere, but cannor support transatmospheric flight when air density becomes too low to sustain the cycle. They are tipically referred as rocket-based combined-cycle engines $\textit{RBCC}$.
 
 \begin{figure}[!ht]
 \centering
@@ -1825,18 +1825,193 @@ The $\textit{ejector}$ results in an increased total mass flow. The rocket eject
 
 \newpage
 
-\section{Combustion in rockets}
+\section{Combustion in solid rockets}
+
+Used for take-off of heavy launchers. It is simple, cheap and not flexible. Combustion involves comprex reactions in solid, liquid and gaseous phases. These combustion processes are usually very efficient, due to the very high combustion temperatures and thus high rate of chemical reactions, helping to achieve nearly complete combustion. Heat release is between 95 and 99.5 \% of the maximum available.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/homo.png}
+\end{figure}
+
+Heterogeneous solid propellants during combustion produce a lot more smoke. Heterogeneous propellants are composed by a binder, ozidizer and metallic fuel.
+Experimental observations show complicated 3-dimensional micro-structures, a 3-dimensional flame structure, alluminum agglomeration and nonlinear response behavior.
+
+\subsection{Behavior of single ingredients}
+
+Ammonium perchlorate is one of the major ingredients. This oxidizer is capable of self-deflagration with a low pressure combustion limit at approximately 2 MPa. Its influence on combustion is critically dependent on oxidizer purity. The surface regression rate ranges from 3 mm/s (2 MPa, 299 K) to 10 mm/s (1.4 MPa, 423 K). The various binders used in composite propellants are less well characterized and their combustion properties vary, depending on the binder type, heating rate, and combustion chamber pressure. The addition of powder alluminum is known to favorably influence specific impulse and combustion stability. Alluminum particles usually collect into large agglomerate during combustion process. The combustion behavior depends on particle size, shape, surface oxidizers and combustion wave environment.
+
+\subsection{Combustion wave structure of homogeneous propellants}
+
+When the heat flux from the flame pyrolyzes the solid propellant, the gaseous products are pre-mixed. A flame emitting a strong radiation and a dark zone (emit in the infrared) between the flame and the burning surface is observed. The thickness of the dark zone decreases when pressure increases and the heat release close to the surface increases.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/homo2.png}
+\end{figure}
+
+A thin layer of liquid fuel, which is the degradation zone is observed. Here the temperature is quite high so that the propellant molecules vaporize and give degradation products as $NO_{2}$, $NO$ which leave the surface of the propellant. Usually, catalyzers change the primary combustion zone more than the condensed phase processes. They increase or decrease the heat flux at the surface and change the amount of burned propellant.
+
+\subsection{Heterogeneous propellants}
+
+Chemical ingredients:
+
+\begin{itemize}
+  \item binder
+  \item oxidizers
+  \item metal powders
+  \item ballistic modifiers
+\end{itemize}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/hetetable.png}
+\end{figure}
+
+\subsubsection{Oxidizer}
 
 
+Typical oxidizer is the ammonium perchlorate $(NH_{4}ClO_{4})$ which is an inorganic salt, non-toxic and soluble in water. Products of the combustion processes are cloridric acid and other substances highly toxic and corrosive:
 
+\begin{equation}
+  (NH_{4}ClO_{4}) \rightarrow \frac{3}{4}O_{2} + \frac{1}{2}Cl_{2} + 2H_{2}O + \frac{1}{2}NO_{2}
+\end{equation}
 
+\subsubsection{Binder}
 
+The role of the polymeric binder is the coesion of ingredients, it is also fuel (for regular and complete combustion) and it is responsible for elasticity and mechanical properties. If the binder mass fraction is low, then the mixture is more reactive but rigid. Instead, if binder mass fraction is high the combustion is incomplete. Tipically, propellants have a binder mass fraction of ~17\%.
 
+\subsubsection{Additives}
 
+The aim is to:
+\begin{itemize}
+  \item improve mechanical properties
+  \item speed up chemical reactions
+  \item guarantee a better powder dispersion
+\end{itemize}
 
+They are divided in $\textit{plasticizers}$ and $\textit{dispersion agents}$. Plasticizers are used to low the viscosity to improve propellant manufacturing, while dispersion agents improve adesion, prevent agglomeration and inhibits corrosion.
 
+\subsubsection{Metal powders}
 
+Advantages given by the Alluminum powders:
+\begin{itemize}
+  \item oxidation from Al to $Al_{2}O_{3}$ strongly exothermic
+  \item higher density with respect to other ingredients
+  \item combustion products with a lower molecular weight
+  \item improvement of specific impulses
+\end{itemize}
 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.3\textwidth]{figures/powder2.png}
+\end{figure}
+
+The solid is $\textit{macroscopically homogeneous}$ (density in different locations is the same) but it is $\textit{microscopically heterogeneous}$.\\
+There can be also multimodeal powder with improved filling factor. The higher is the filling factor, the lower is the size required to full the propellant.
+
+\subsection{Ignition}
+
+3 phases:
+
+\begin{enumerate}
+  \item Ignition time lag: the period from the moment the igniter receives a signal until the first bit of grain surface burns.
+  \item Flame-spreading interval: the time from the first ignition of the grain surface until the complete grain burning area has been ignited.
+  \item Chamber-filling interval: the time for completing the chamber filling process and for reaching equilibrium.
+\end{enumerate}
+
+The critical process is a gas-phase reaction above the burning surface. If the igniter is not powerful enough, the flame will be extinguished. The ignitability of a propellant at a given pressure and temperature is shown in the figure:
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/ignita.png}
+\end{figure}
+
+The mechanisms for achieving extinction are:
+\begin{itemize}
+  \item very rapid depressurization: done by a sudden increase of the nozzle throat area
+  \item quenching flames by injecting liquid such as water
+  \item lowering the combustion pressure below the pressure deflagration limit
+\end{itemize}
+
+\subsection{Mechanical properties}
+
+4 main failures can be identified in solid propellants:
+\begin{itemize}
+  \item surface cracks
+  \item debonding of interfaces
+  \item dewetting (dilatation)
+  \item excessive deformation
+\end{itemize}
+
+In presence of a fracture, the flame penetrates in the opening and the surface of burning is modified.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/debo.png}
+\end{figure}
+
+Debonding of interfaces happens when there is detachment between propellant and thermal protection or between thermal protection and case. The flame propagates inside the opening.\\
+Dewetting occurs when contact between binder and particles is lost. Vaculoes are opened. When loaded, cracks opens and propagate
+
+\subsection{Metallized propellants}
+
+Alluminum is an interesting metal fuel due to its stability, low toxicity, low cost, availability. Powders available:
+\begin{itemize}
+  \item nano-alluminum: 50-200 nm
+  \item micro-alluminum: 5-50 $\mu$m
+  \item activated alluminum: processed to enhance reactivity
+\end{itemize}
+ Some of the disadvantages of alluminum are the high temperature that causes thermal stresses (heavier protections) the generation of agglomerates which cause a reduction of the real specific impulse. Coarse agglomerates are removed by the use of nanoaluminum. Combustion of fines metals have better quality and may lead to better efficiency. Finer oxidizer grant faster burnig rate.
+
+\subsection{Results}
+
+ Combustion mainly depend on:
+ \begin{itemize}
+   \item pressure
+   \item propellant chemical formulation (binder, oxidizer, powder)
+   \item ingredients size
+ \end{itemize}
+
+\subsubsection{Burning rate measurement}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/expe.png}
+\end{figure}
+
+The experimental infromation gives the Vieille law:
+
+\begin{equation}
+  r_{b} = ap^{n}
+\end{equation}
+
+but it also depends on alluminum powder size and on the ingredients mass fraction:
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/burning3.png}
+\end{figure}
+
+The use of nanoaluminum implies burning rate $r_{b}$ increase, combustion efficiency increase and condensed particle size decrease.\\
+A variant of nanoaluminum is $\textit{hydrides}$ which is an extremely reactive material (dissociates at 500 Celsius) and has the same advantages but increased specifc impulse.
+
+\subsubsection{Combustion instabilities}
+
+Combustion instability means pressure oscillations that through the heat transfer increase to the noozle walls and to the case. Fortunately, there are elements which contribute to damping of the instabilities such as the visco-elastic material which absorb energy.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/vortex.png}
+\end{figure}
+
+In the figure it is possible to see the vortex-shedding instabilities.
+
+\newpage
+
+\section{Combustion in liquid rockets}
+
+TODO
 
 
 \end{document}
