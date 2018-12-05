@@ -1,6 +1,6 @@
-.aux
-.fls
-.fdb_latexmk
-.log
-.gz
-.toc
+*.aux
+*.fls
+*.fdb_latexmk
+*.log
+*.gz
+*.toc
