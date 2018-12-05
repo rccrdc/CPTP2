@@ -1737,8 +1737,11 @@ The figure shows the performance of a bluff body as a flameholder. Flame velocit
 
 \section{Combustion in air-breathing engines: scramjet}
 
-This engine, which does not use rotating parts, will power vehicles at very high speed (hypersonic speeds, $M>5$). A sramjet propulsion system is a hypersonic air-breathing engine in which heat addition, due to combustion of fuel and air, occurs in the flow that is supersonic relative to the engine. Scramjet engines are able to make the transition between ramjet and scramjet operation.\\
-In a ramjet engine, the incoming supersonic aiflow is decelerated to subsonic speeds by means of multi-shock intake system and diffusion process. Fuel is added to the subsonic airflow, the mixture combusts and then reaccelerates to supersonic speeds. Instead, the airflow in a pure scramjet remains supersonic throughout the combustion process. Crossover points between ramjet and scramjet operation indicate the benefits of operating in ramjet until Mach 5-6. For speeds greater than Mach 6, the combustion is supersonic (scramjet) due to limitation of engine structural integrity (very high pressure by flow deceleration at subsonic speeds).
+Hypersonic flight cannot be achieved by conventional turbojet or ramjet engines. These engines operate by compressing and reducing the speed of a subsonic or supersonic airflow prior to combustion by means of multi-shock intake system. This deceleration and compression translates into an increase in the overall pressure, temperature, and density of the airstream. At speeds of Mach 6 and greater the temperatures and heat transfer rates generated are high enough to incinerate most known materials. These temperatures also
+result in dissociation of the combustion materials, resulting in large chemical energy losses. Fuel is added to the subsonic airflow, the mixture combusts and then reaccelerates to supersonic speeds.\\
+A sramjet propulsion system is a hypersonic air-breathing engine in which heat addition, due to combustion of fuel and air, occurs in the flow that is supersonic relative to the engine. Scramjet engines are able to make the transition between ramjet and scramjet operation.  A major drawback is
+that scramjet engines cannot produce thrust at a standstill, required some other power to accelerate up to takeover speed.
+Crossover points between ramjet and scramjet operation indicate the benefits of operating in ramjet until Mach 5-6. For speeds greater than Mach 6, the combustion is supersonic (scramjet) due to limitation of engine structural integrity.
 
 \begin{figure}[!ht]
 \centering
@@ -1796,22 +1799,35 @@ As the vehicle continues to accelerate beyond Mach 7, the combustion process is 
 
 \subsection{Fuel injection}
 
+Fuel injectot in scramjet enginee is a diffcult task to accomplish. The major challenges are accomplishing stable, efficient, mixing and combustion in a supersonic flow. The subsonic flow withon ramjets allow sufficient time for fuel to mix. However, at supersonic sppeds encounteres within sramjet the residence time of any fluid particle is on order of $10^{-3}$ seconds. Low pressure zones created by ramps and cavities internal to the combustor have been effective at flame holding but the also may contribute to pressure losses.
+
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/injescram.png}
 \end{figure}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.5\textwidth]{figures/inje2.png}
-\end{figure}
+Injection of fuel at the base of a low degree ramp is a good technique since it creates recirculation.
 
 \subsection{Fuel choice}
+
 Fuel choice between hydrocarbon and hydrogen is typically driven by heat-sink requirements. Missiles may use hydrocarbon fuels for their volumetric energy density. Long range aircraft tend toward hydrogen because it has superior energy release per kg of fuel and heat absorption capability.
 
 \subsection{Combined cycles}
 
-TODO
+Air-breathing combined cycle engines are intended primarily for missions involving high-speed cruise in the atmosphere, but cannor support transatmospheric flight when air density becomes too low to sustain the cycle. They are tipically referred as rocket-based combined-cycle engines($\textit{RBCC}$).
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/injector.png}
+\end{figure}
+
+The $\textit{ejector}$ results in an increased total mass flow. The rocket ejector mode is used from takeoff through low supersonic speeds. As the Mach number approaches 3, the engine transition to ramjet mode provides a higher specific impulse. Around $M=6$ the operation of the engine turns to the scramjet mode and the flow remains supersonic throughout the entire engine.
+
+\newpage
+
+\section{Combustion in rockets}
+
+
 
 
 
