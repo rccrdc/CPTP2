@@ -1,20 +1,18 @@
 
 \documentclass[12pt]{article}
 \usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
+\usepackage{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage[colorinlistoftodos]{todonotes}
 \usepackage[version=4]{mhchem}
 \usepackage{mathtools}
 
 \usepackage[margin=0.8in]{geometry}
 
-\title{
-   Combustion Processes in Thermochemical Propulsion\\
-  \large Notes by Riccardo Canola}
+\title{Combustion Processes in Thermochemical Propulsion}
 
 \date{}
+\author{Notes by Riccardo Canola}
 
 \begin{document}
 
@@ -34,7 +32,7 @@ Combustion is the development of chemical reactions of oxido-reduction, strongly
     \item \textit{Premixed flame}: the reactants are perfectly mixed before chemical reaction.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/diffusion_premixed.png}
 \end{figure}
@@ -62,15 +60,15 @@ Can be used above $Mach 2$. The gas velocity at the entrance of the combustion c
 \begin{itemize}
     \item \textit{Liquid rocket}: they provide a good performance and permit re-ignition. The injector design is the most delicate aspect for the engine performance.
     \item \textit{Solid rocket}: fuel is a solid cylinder provided with a central perforation which forms the combustion chamber. The thrust is proportional to the combustion surface, therefore it is designed in a way that the combustion follows a rule ($r_{b}=ap^{n}$). The solid fuel (alluminum powder) contains the oxidizer and therefore the flame should be premixed. However, oxidizer decomposition products can react in diffusion flame. The interaction between premixed and diffusion flames is the most critical part of any modeling approach.
-    
-\begin{figure}[h!]
+
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.3\textwidth]{figures/flame_solid.png}
 \end{figure}
-    
+
     \item \textit{Hybrid rocket}: fuel solid and oxidizer liquid. Oxidizer are introduced in form of spray. The flame develops inside the boundary layer ($r_{b}=aG_{ox}^{n}$).
-    
-\begin{figure}[h!]
+
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/hybrid.png}
 \end{figure}
@@ -88,13 +86,13 @@ Flame is a discontinuity surface separating reactants from combustion products. 
     \item deflagration and detonation
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/premixed_structure.png}
 \caption{Premixed flame structure}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/diffusion_structure.png}
 \caption{Diffusion flame structure}
@@ -222,7 +220,7 @@ The heat released to the combustion products under adiabatic conditions is:
     \Delta T_{adiabatic} = \frac{\Delta H_{r}}{C_{P}N_{tot}}
 \end{equation}
  For high temperature \textit{dissociation reactions} (strongly endothermic) develop. They produce other species ($CO, H_{2},...$), decreasing the global exothermicity of the reaction and the adiabatic flame temperature.
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/dissociation.png}
 \end{figure}
@@ -281,7 +279,7 @@ is the equilibrium condition (not $\Delta F^{0}$!)
     \item $K_{X}=\prod_{j=1}^{N}(X_{j})^{{v_{j}^{''}}-{v_{j}^{'}}} \rightarrow$ partial molar function
     \item $K_{c}=\prod_{j=1}^{N}(M_{j})^{{v_{j}^{''}}-{v_{j}^{'}}} \rightarrow$ partial molar concentration
     \item $K_{Y}=\prod_{j=1}^{N}(Y_{j})^{{v_{j}^{''}}-{v_{j}^{'}}} \rightarrow$ partial mass fraction
-\end{itemize} 
+\end{itemize}
 but only $K_{p}$ and $K_{c}$ are functions of just one variable and don't depend on pressure. Propulsion applications preferably uses $K_{p}$.
 
 \subsection{Mixture composition and flame temperature}
@@ -330,7 +328,7 @@ is the enthalpy available due to chemical reactions, while:
 
 is the enthalpy absorbed to warm up the combustion products.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/availablevsabsorbed.png}
 \end{figure}
@@ -414,7 +412,7 @@ Real rate is $10^{10}$ times lower of the collision frequency $Z_{AB}$. Also, co
 $d_{YZ}$ is the distance between Y and Z and $d_{XY}$ is the distance between X and Y. The curves of the picture are curves at equal potential energy. Stability is given by two valleys. For the initial system point a and for the final system point b.
 The transition from the intial system to the final system requires the moving from the first valley to the second, following the path which is the most efficient from the energetic point of view, crossing c (\textit{punto di sella}). The crossing of the point c can occur if the system receives a suitable amount of energy (molecular vibrations) that is given by an exponential term ($E_{a}/RT$) which explains the concepts of efficient collision which leads to the \textit{activated complex}.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.35\textwidth]{figures/pointc.png}
 \end{figure}
@@ -502,13 +500,13 @@ All monomolecular reactions are of order 1, but not all the first order reaction
 
 Often chemical reactions follow second order reactions. In more complex reaction, the second order means that the slow step, which is responsible for the reaction rate, is bimolecular.
 \begin{equation}
- A+B\xrightarrow{k_{f}} AB   
+ A+B\xrightarrow{k_{f}} AB
 \end{equation}
     \begin{equation}
         \frac{d[AB]}{dt}=K_{f}[A][B]=-\frac{d[A]}{dt}=-\frac{d[B]}{dt}
     \end{equation}
 \begin{equation}
-   2A\xrightarrow{k_{f}} C+D 
+   2A\xrightarrow{k_{f}} C+D
 \end{equation}
     \begin{equation}
         2\frac{d[C]}{dt}=2\frac{d[D]}{dt}=2K_{f}[A]^{2}=-\frac{d[A]}{dt}
@@ -633,7 +631,7 @@ $T_{f}$ has a very strong effect on $S_{L}$. At high temperature, free radicals 
 
 \subsubsection{Effect of $\alpha$ and $C_{p}$ (P)}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/speed.png}
 \end{figure}
@@ -649,7 +647,7 @@ Therefore, high values of $\alpha$ and low values of $C_{p}$ are key for a good 
 
 Rather than considering a round jet, the jet is considered to be planar. The geometry is thus totally two-dimensional. Moreover, the jet and the sorrounding air have the same unit flow rate $\rho v$.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/burke.png}
 \end{figure}
@@ -690,7 +688,7 @@ Consequently, if two functions are defined $Z_{0}=Y_{K}-Y_{Ox}/v_{s}$ and $Z_{P}
 \end{equation}
 Such functions are called \textit{Schvab-Zeldovitch} functions and they exist only when the diffusion coefficients are the same. They satisfy the boundary conditions. Solving $Z_{0}(x,y)$ is now simply a question of mathematics.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/schumann.png}
 \end{figure}
@@ -701,7 +699,7 @@ The length of the flame $L_{F}$ is inversely proportional to the diffusion coeff
 
 The stability of a combustion wave can be studied from a flame originated by a Bunsen burner. This is done by analyzing how the position of the flame changes with respect to the outflow section.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/stability2.png}
 \end{figure}
@@ -720,9 +718,10 @@ The stability of a combustion wave can be studied from a flame originated by a B
     \item \textit{Blow-off}: downstream propagation of the flame
 \end{itemize}
 These conditions can be characterized by considering the jet and flame velocities and also the distance form the rim.
-The parameters to look into to analyze these phenomena is the \textit{velocity gradient}. We can distinguish the critical velocity gradient for flash-back and the critical velocity gradient for blow-off.
+The parameters to look into to analyze these phenomena is the \textit{velocity gradient}.
+We can distinguish the critical velocity gradient for flash-back and the critical velocity gradient for blow-off.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/flash.png}
 \end{figure}
@@ -740,7 +739,7 @@ The parameters to look into to analyze these phenomena is the \textit{velocity g
 \end{itemize}
 Due to heat transfer from the flame to the walls (which has higher thermal conductivity), temperature of the reaction zone gets lowered below ignition point and the flame gets extinguished.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/quenching.png}
 \end{figure}
@@ -763,7 +762,7 @@ Flame stability is usually characterized by lift-off velocity, lift-off height a
 
 The stability limits of turbulent jet diffusion flames are important for operation of combustion systems and have safety implications. The lift-off and blow-out behaviors have been subject of numerous research efforts to allow the combustion within the stability limits.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/stableflame.png}
 \end{figure}
@@ -816,7 +815,7 @@ The rate of heat loss to the walls of a vessel having surface $S$, radius $r_{p}
 where $\lambda$ is the thermal conductivity and $L$ is the characteristic thickness of the thermal layer near the wall.\\
 Both equation depend on the geometry of the vessel, therefore the ignition temperature from these quations will depend upon the geometry.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/thermallossgain.png}
 \end{figure}
@@ -836,7 +835,7 @@ This picture shows the relationship between the heat developed and the heat lost
 
 The effect of chamber volume can be seen from the following figure:
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/dashed.png}
 \end{figure}
@@ -867,7 +866,7 @@ The process of combustion of a solid substance involves a more complex analysis:
     \item emission of light from the reaction zone
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/solid.png}
 \end{figure}
@@ -887,7 +886,7 @@ Within the 3 theories described above, several models have been proposed. These 
 
 \subsection{Explosion limits}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/explosion.png}
 \end{figure}
@@ -900,21 +899,21 @@ Within the 3 theories described above, several models have been proposed. These 
 
 \subsection{Ignition of keresone sprays}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.3\textwidth]{figures/kerosene.png}
 \end{figure}
 
 The minimum ignition energy is plotted for 4 different values of the mean drop size. For each curve the left-hand size represents a region of no ignition and the right-hand size a region of ignition. This figure shows how the weak-ignition limit is improved by a reduction of drop size. The curves become steeper with increasing the drop size which indicates that a much greater increase in spark energy is needed.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.3\textwidth]{figures/kerosene2.png}
 \end{figure}
 
 In this figure the ignition limits obtained at 2 different air velocities are plotted in terms of \textit{SMD} (sauter mean diameter - average of particle size) vs air-fuel ratio. For both velocities the weak-ignition limits are widened by an increase in spark energy. As the air-fuel ratio is reduced towards the stoichiometric value ($14.8$), the more rapid reaction releases more heat that allows further fuel evaporation and extend the ignition limits into a region of larger drop sizes.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.3\textwidth]{figures/kerosene3.png}
 \end{figure}
@@ -940,7 +939,7 @@ the results of these experiments show that the most important parameters affecti
 The simplest case to study is not that of a drop whose diameter reduces as it burns, but rather that of a drop which is fed with fuel at its center so the diameter remains constant. With this arrangement the problem is stationary, the flame and the drop can be described with one spatial variable, the distance from the center of the drop.\\
 The combustion of a single droplet is studied using the double-film model. One film separates the droplet surface from the flame front, and the other separates the flame from the sorrounding oxidizer.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/droplet.png}
 \end{figure}
@@ -987,8 +986,8 @@ The fuel \textit{evaporation rate} expression can be written as:
  \end{equation}
  The value of $B$ must be evaluated in order to calculate the mass evaporation rate. Before that, $Y_{F}$ (fuel mass fraction) or $p_{F}$ must be determined, but the gas which sorrounds the droplet is saturated by the vapor or liquid of the droplet at the surface. Thus the problem becomes to determine $T_{d}$ since pressure data are available.\\
  The time of evaporation of a liquid droplet is an important parameter in combustion chamber design since the lifetime of the largest droplet in a spray determines the minimum time the droplet must be allowed to reside in the combustion chamber.
- 
-\begin{figure}[h!]
+
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/droprate.png}
 \end{figure}
@@ -998,7 +997,7 @@ The fuel \textit{evaporation rate} expression can be written as:
     \item (right) the temperature distribution of an evaporating liquid droplet
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/flamediameter.png}
 \end{figure}
@@ -1025,7 +1024,7 @@ Spray combustion occurs in liquid rocket engines, gas turbines, diesel engines. 
 
 Sprays are burned in various ways, and each poses different problems:
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/spraycomb.png}
 \end{figure}
@@ -1063,7 +1062,7 @@ The shape of liquid droplets may be considered to be spherical (can be character
 
 Overall spray characteristic are represented by distribution curves which are given in terms of the cumulative percentage. In many processes it is desirable to work only with average diameters instead of the complete drop-size distribution.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/distribution.png}
 \end{figure}
@@ -1076,14 +1075,14 @@ Although combustion of droplets in a spray in governed by the diffusion of fuel 
 
 Experiments on spray combustion flames of axial jets of kerosene show the region where the droplets exist is limited to a small area above the burner nozzle. It is concluded that most of the droplets in the flame do not burn individually but that fuel vapor from the droplets forms a cloud and burns like a gaseous diffusion flame.\\ Changing only the fuel from liquid kerosene to gaseous propane, the spray combustion flame was found to be very similar to the previous. It is obvious that there is a resemblance between the two cases. However in the gas diffusion flame, chemical reactions occured slightly downstream as compared with the spray one. This is due to higher flow velocity of propane than of kerosene. In the spray, the temperature drop in steeper than in the gas diffusion flame, the difference is caused by the higher radiation cooling rate of the spray combustion flame.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/spraygas.png}
 \end{figure}
 
 \subsubsection{The spray combustion process}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/core.png}
 \end{figure}
@@ -1104,28 +1103,28 @@ KIVA-II is a program devoted to the numerical calculation of transient, 2 and 3-
 The in-cylinder dynamics of internal combustion engines involve complex physical and chemical processes. These include the transient 3-dimensional dynamics of evaporating fuel sprays, chemical reactions and heat transfer. The KIVA code has the ability to calculate such flows with arbitrarily shaped piston geometries and it solves the unsteady equations of motion of the reactive mixture coupled to the equations for a single component vaporizing fuel spray.\\
 The KIVA equations can be used to solve both laminar and turbulent flows which differ primarily in the form and magnitude of the transport coefficients (much larger in the turbulent case).
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/kiva.png}
 \end{figure}
 
 The figures show the computed and measured cylinder pressure (left) and the computed and measured heat release (right) for a Caterpillar engine.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/grid.png}
 \end{figure}
 
 Perspective view (1/6 of the combustion chamber) of the computational grid and fuel droplet distribution.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/kiva2.png}
 \end{figure}
 
 In-cylinder gas temperature contours computed using different models (left), the wall impingement is visible. Comparison between computed emissions and measured engine-out data with varying fuel injection timing.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/kiva3.png}
 \end{figure}
@@ -1196,7 +1195,7 @@ Atomization is the process of conversion of the liquid fuel into small drops.\\ 
 
 \subsubsection{Simplex atomizer}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/simplex.png}
 \end{figure}
@@ -1205,16 +1204,16 @@ It is a pressure-swirl atomizer. The fuel is fed into a swirl chamber through ta
 
 \subsubsection{Duplex atomizer}
 
-The drawback of the simplex atomizer has led to the development of wide range atomizers such as \textit{duplex}, \textit{dual orifice} and \textit{spill} atomizers.\\
+The drawback of the simplex atomizer has led to the development of wide range atomizers such as \textit{duplex}, \textit{dual orifice} and \textit{spill} atomizers.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/duplex.png}
 \end{figure}
 
 Two simplex nozzles are fitted concentrically, one inside the other. At low fuel flow all the fuel is supplied from the pilot nozzle, when the fuel pressure reaches a fixed value, the pressurising valve opens and admits fuel to the main nozzle.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/spill.png}
 \end{figure}
@@ -1222,7 +1221,7 @@ Two simplex nozzles are fitted concentrically, one inside the other. At low fuel
 The spill atomizer is a simplex atomizer but with a passage through which fuel can be spilled away from the atomizer. There is a constant use of a high pressure meaning that at low fuel flows the swirl is adequate to provide an efficient atomization of the fuel.
 //In the rotary atomizer the fuel is fed into a rotating surface where it spreads out under the action of centrifugal force.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/airblast.png}
 \end{figure}
@@ -1284,7 +1283,7 @@ and
 
 In the following set of equations for the axisymmetric flows $m=1$, whereas fot planar flows $m=0$ and the variable $r$ is replaced by $y$.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/turbulent.png}
 \end{figure}
@@ -1337,7 +1336,7 @@ Flames in combustibile gas mixture in tubes reaches enourmous velocities (~$3500
 
 Consider a long tube closed at the left by a piston. A small velocity $dw$ is imparted to the piston, this movement produces in the gas a weak compression wave that travels from left to roght with the velocity of sound. The gas to the right of the wave front is at rest, while the gas between the wave front and the piston is compressed adiabatically by $dp$ and has the velocity $dw$. Then, the velocity of the piston is increased by another $dw$, a second compression wave is produced in the gas. By ripetition of this procedure the velocity of the piston is brought to the final velocity $w$.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/airblast.png}
 \end{figure}
@@ -1380,7 +1379,7 @@ We now consider a shock wave traveling in combustible gas. Plane $1$ lies in the
 
 \subsection{The Rankine-Hugoniot curve}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/rankine.png}
 \end{figure}
@@ -1389,7 +1388,7 @@ It is essentialy a plot of all possible valies of $1/\rho_{2}$ and $p_{2}$ for a
 
 \subsection{Deflagration detonation comparison}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/defla.png}
 \end{figure}
@@ -1408,34 +1407,34 @@ It is usual to classify hydrocarbons inthe following 5 series:
 
 \begin{itemize}
     \item \textit{Alkanes (paraffins)} $[C_{n}H_{2n+2}]$: the symples hydrocarbon, \textit{methane}, belongs to this series. Hydrocarbons for aeronautical use contain from 35 to 45\% of paraffins. Paraffins have a high ratio hydrogen/carbon, a low density, a high heat of combustion and their combustion is characterized by low carbon deposits and low smoke production. In reciprocating combustion engines they show a low resistance to knock (ability not to self-ignite and burn in an uncontrolled way while the fuel is being compressed).
-    
-\begin{figure}[h!]
+
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/paraffins.png}
 \end{figure}
 
     \item \textit{Alkanes (olefins)} $[C_{n}H_{2n}]$: olefins do not exist in oil. They come from refining processes. Their molecules contain a lower number of hydrogen atoms, compared to the maximum possible value. Olefins are very active a quickly react with many compounds to form rubbers. For this reason they are undesired in the fuels for gas turbines. The lightest molecule of this series is \textit{ethylene} $(C_{2}H_{4})$ which contains a double bond between the carbon atoms.
-    
-\begin{figure}[h!]
+
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/olefins.png}
-\end{figure}    
-    
+\end{figure}
+
     \item \textit{Alkynes (acetylene series)} $[C_{n}H_{2n-2}]$: they are unsaturated hydricarbons which contain a triple bond. The first member od the series is \textit{acetylene} $C_{2}H_{2}$, very unstable. They have a high combustion temperature and a high flame speed.
     \item \textit{Cyclanes (naphthenes)} $[C_{n}H_{2n}]$: saturated hydrocarbons, in which carbon atoms form rings instead of chains. In distelled fuels they are in the same proportion of paraffins (35 to 45\%). Similar to paraffins for chemical stability, heat combustion, and the low tendency to produce smoke.
-    
-\begin{figure}[h!]
+
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/cyclanes.png}
 \end{figure}
 
     \item \textit{Aromatics} $[C_{n}H_{2n-6}]$: the molecular structure is a ring, with six carbon atoms and three double bonds. They contain a lower amount of hydrogen and consequently their heat of combustion is lower. Another disadvantage is the high smoke production and high hygroscopicity, which can lead to crystals precipitation when the fuel is at low temperature. Aromatics have a high solvent activity in the rubbers, this can lead to serious problems during fuel feeding in aircrafts with rubber tanks. The simplest aromatic is $benzene$.
-    
-\begin{figure}[h!]
+
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.2\textwidth]{figures/aromatics.png}
 \end{figure}
-    
+
 \end{itemize}
 
 \subsection{Fuel properties}
@@ -1536,7 +1535,7 @@ There are 2 classes:
     \item Not prone to combustion instability.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/table.png}
 \end{figure}
@@ -1640,7 +1639,7 @@ The first is the most significant mechanism. $NO$ thermal is produce through the
     N + O_{2} \leftrightarrow NO + O
 \end{equation}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/pollutants.png}
 \end{figure}
@@ -1657,9 +1656,9 @@ The design of a combustion chamber aims to reduce the size of the chamber, compl
     \item mixing of fuel vapor with the air
     \item development and completion of chemical reactions
 \end{itemize}
- In order to keep the engine size small, the intensity of combustion is usually very high $(500000 KJ/(m^{3}s))$.
+In order to keep the engine size small, the intensity of combustion is usually very high 500000 $KJ/(m^{3}s))$.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{figures/gaschamber.png}
 \end{figure}
@@ -1669,7 +1668,7 @@ High turbulence is needed for intense combustion. This causes a considerable pre
 
 \subsection{Approximate calculation of mixture ratio}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/mixturetable.png}
 \end{figure}
@@ -1681,7 +1680,7 @@ Approaching the turbojet combustion as a heating process, we can write:
 Normal value of the mixture ratio (0.025) are lower than the respective stoichiometric ratio. This is due to prevent the high temperature at the exit of the combustion chamber.\\
 The required value of f would lead to a mixture too lean for ignition and combustion. For this reasin the fuel, is initially mixed and burned with a small amount of primary air.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/airdistribution.png}
 \end{figure}
@@ -1692,14 +1691,14 @@ The primary zone is fed by ~20\% of the airflow, about 12\% of the air passes th
 
 In this figure it is possible to see the trend of the adiabatic flame temperature vs $\phi$. The pressure dependence is a result of dissociation (larger at lower pressure). Dissociation reduced the maximum temperature reachable.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/tvsphi.png}
 \end{figure}
 
-The jet engine performance is strongly dependent on the mass flow rate per unit cross-sectional area. A large area for a given flow implies large engines mass, large volume and large drag. For this, the fluid velocity has to be as high as possible, avoiding losses due to friction. The chamber is responsible for a limitation, due to the need to mantain a stationary flame within a moving stream. The flame remains stationary when the speed of the flame is equal to the mixture velocity. 
+The jet engine performance is strongly dependent on the mass flow rate per unit cross-sectional area. A large area for a given flow implies large engines mass, large volume and large drag. For this, the fluid velocity has to be as high as possible, avoiding losses due to friction. The chamber is responsible for a limitation, due to the need to mantain a stationary flame within a moving stream. The flame remains stationary when the speed of the flame is equal to the mixture velocity.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/flame1.png}
 \end{figure}
@@ -1720,14 +1719,14 @@ It is the process of conversion of the liquid fuel into small drops. The aim is 
 
 Need of an easy and reliable light-up during ground starting and also relighting if the combustion chamber after a flameout in flight. The ignition performance is affected by fuel properties through concentration of the fuel vapor. Effects of volatility on evaporation rates, viscosity and the mean drop size are also important.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/ignitionloop.png}
 \end{figure}
 
 The ignition performance of an engine is usually expressed in terms of the range of flight conditions over which combustion can be restablished after a flameout at altitude (ignition loop diagram).
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/flameholder.png}
 \end{figure}
@@ -1741,14 +1740,14 @@ The figure shows the performance of a bluff body as a flameholder. Flame velocit
 This engine, which does not use rotating parts, will power vehicles at very high speed (hypersonic speeds, $M>5$). A sramjet propulsion system is a hypersonic air-breathing engine in which heat addition, due to combustion of fuel and air, occurs in the flow that is supersonic relative to the engine. Scramjet engines are able to make the transition between ramjet and scramjet operation.\\
 In a ramjet engine, the incoming supersonic aiflow is decelerated to subsonic speeds by means of multi-shock intake system and diffusion process. Fuel is added to the subsonic airflow, the mixture combusts and then reaccelerates to supersonic speeds. Instead, the airflow in a pure scramjet remains supersonic throughout the combustion process. Crossover points between ramjet and scramjet operation indicate the benefits of operating in ramjet until Mach 5-6. For speeds greater than Mach 6, the combustion is supersonic (scramjet) due to limitation of engine structural integrity (very high pressure by flow deceleration at subsonic speeds).
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/ramjetcomp.png}
 \end{figure}
 
 A close integration engine/vehicle is observed for a propulsion system with a scramjet. The engine occupies the entire lower surface of the vehicle body. It consists of 5 major engine components: \textit{internal inlet, isolator, combustor, internal noozzle and the fuel supply subsystem}.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/scramjetengine.png}
 \end{figure}
@@ -1757,7 +1756,7 @@ A close integration engine/vehicle is observed for a propulsion system with a sc
 
 Engine layout comparison between ramjet and scramjet:
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{figures/ramvsscra.png}
 \end{figure}
@@ -1766,7 +1765,7 @@ Engine layout comparison between ramjet and scramjet:
 
 The primary purpose of the high speed air induction system is to capture and compress air for processing by the remaining components of the engine. For vehicles flying at high supersonic speeds, adequate compression can be achieved without a mechanical compressor. The forebody provides the initial external compression and contributes to the drag and moments of the vehicle. The air in the captured stream tube undergoes a reduction in Mach number with an increase in pressure and temperature as it passes through the system of shock waves.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{figures/scram2.png}
 \end{figure}
@@ -1779,7 +1778,7 @@ The isolator allows supersonic flow to adjust to a static pressure higher than i
 
 The expansion system, consisting of the internal nozzle and vehicle aftbody, completes the propulsion path to produce thrust. The design of the nozzle has a major effect in the efficiency of the propulsion system and the vehicle due to its ability to influence vehicle pitching moment and lift.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{figures/scramnozzle.png}
 \end{figure}
@@ -1790,19 +1789,19 @@ As the scramjet powered vehicle accelerates along its flight trajectory from Mac
 There is an inevitable transition region from Mach 5 to 7 in which neither ramjet nor scramjet operation is sufficient to describe the internal flow. The total temperature begins to decrease along with the pressure rise produced by the combustion. Consequently, a weaker pre-combustion system is required and the pre-combustion shock is pulled back from the throat towards the entrance. Operation in this critical regime is referred to as dual-mode scramjet, implying mixed characteristics of both subsonic and supersonic flow.\\
 As the vehicle continues to accelerate beyond Mach 7, the combustion process is unable to separate the flow and the engine operates in scramjet mode with a shock-free isolator. The inlet shocks propagate through the entire engine. The scramjet operational line and isolator phenomena during mode transition are illustrated in the following figure:
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/dualmode.png}
 \end{figure}
 
 \subsection{Fuel injection}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/injescram.png}
+\includegraphics[width=0.5\textwidth]{figures/injescram.png}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/inje2.png}
 \end{figure}
@@ -1823,5 +1822,5 @@ TODO
 
 
 
-\end{document}
 
+\end{document}
