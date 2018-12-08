@@ -26,10 +26,10 @@
 
 \section{Phenomenological introduction to combustion processes}
 
-Combustion is the development of chemical reactions of oxido-reduction, strongly exothermic and very fast, due to heat and catalyst products accumulation.
+Combustion is the development of chemical reactions of oxido-reduction, strongly exothermic and very fast, due to heat and catalyst products accumulation. Catalysis is the process of increasing the rate of a chemical reaction by adding a catalyst, which is not consumed in the reaction. This substance provides an alternative reaction with a lower activation energy. The cause of these reaction are flames:
 \begin{itemize}
-    \item \textit{Diffusion flame}: the reactants diffuse into each other during the chemical reaction.
-    \item \textit{Premixed flame}: the reactants are perfectly mixed before chemical reaction.
+    \item \textit{diffusion flame}: the reactants diffuse into each other during the chemical reaction
+    \item \textit{premixed flame}: the reactants are perfectly mixed before chemical reaction.
 \end{itemize}
 
 \begin{figure}[!ht]
@@ -41,25 +41,25 @@ Combustion is the development of chemical reactions of oxido-reduction, strongly
 
 \begin{itemize}
     \item \textit{gas burners}: a swirler is responsible for high turbulence which increases flame speed propagation.
-    \item \textit{liquid fuel burners}: the fuel is injected in form of spray. In order to anchor the flame, the air jet is introduced with a swirl motion, which causes a pressure drop and recirculation zone close to the central axis of the burner. The flame is longer and the soot is responsible for the higher radiation.
+    \item \textit{liquid fuel burners}: the fuel is injected in form of spray. The air jet is introduced with a swirl motion, which causes a pressure drop and recirculation zone close to the central axis of the burner.
 \end{itemize}
 
 \subsection{Internal combustion engines}
 
 \begin{itemize}
-    \item \textit{Otto}: the combustion process in this kinf of engine which is spark-ignited, develop through a premixed flame with a laminar or turbulent flame propagation.
+    \item \textit{Otto}: the combustion process in this spark-ignited engine, develop through a premixed flame with a laminar or turbulent flame propagation.
     \item  \textit{Diesel}: the combustion process develops through a diffusion flame and the flame speed propagation is turbulent.
 \end{itemize}
 
 \subsection{Ramjets}
 
-Can be used above $Mach 2$. The gas velocity at the entrance of the combustion chamber is much faster than the flame propagation speed. The recirculation zone grants a permanence of the gas for several milliseconds. Temperature at turbine's blades has to be below a certain value.
+Can be used above $Mach 2$. The gas velocity at the entrance of the combustion chamber is much faster than the flame propagation speed. The recirculation zone grants a permanence of the gas for several milliseconds.
 
 \subsection{Rockets}
 
 \begin{itemize}
     \item \textit{Liquid rocket}: they provide a good performance and permit re-ignition. The injector design is the most delicate aspect for the engine performance.
-    \item \textit{Solid rocket}: fuel is a solid cylinder provided with a central perforation which forms the combustion chamber. The thrust is proportional to the combustion surface, therefore it is designed in a way that the combustion follows a rule ($r_{b}=ap^{n}$). The solid fuel (aluminum powder) contains the oxidizer and therefore the flame should be premixed. However, oxidizer decomposition products can react in diffusion flame. The interaction between premixed and diffusion flames is the most critical part of any modeling approach.
+    \item \textit{Solid rocket}: fuel is a solid cylinder provided with a central perforation which forms the combustion chamber. The thrust is proportional to the combustion surface, therefore it is designed in a way that the combustion follows a rule ($r_{b}=ap^{n}$). The solid fuel (aluminum powder) contains the oxidizer and therefore the flame should be premixed. However, oxidizer decomposition products can react in diffusion flame. The interaction between premixed and diffusion flames is the most critical part.
 
 \begin{figure}[!ht]
 \centering
@@ -77,7 +77,7 @@ Can be used above $Mach 2$. The gas velocity at the entrance of the combustion c
 
 \subsection{Flames}
 
-Flame is a discontinuity surface separating reactants from combustion products. Its peculiar property is the capability of self-sustaining and propagation.
+Flame is a discontinuity surface separating reactants from combustion products. Its peculiar property is the capability of self-sustaining and propagation. They can be classified as:
 
 \begin{itemize}
     \item homogeneous and heterogeneous
@@ -100,7 +100,7 @@ Flame is a discontinuity surface separating reactants from combustion products. 
 
 \subsection{Flame propagation rate}
 
-It is the speed relative to the fresh mixture. It is a constant for a specific mixture and it is proportional to the amount of mixture that in the time unit can be changed into combustion products.
+It's the speed relative to the fresh mixture. It's a constant for a specific mixture and it is proportional to the amount of mixture that in the time unit can be changed into combustion products.
 
 \begin{itemize}
     \item methane/air: $0.4 m/s$
@@ -111,7 +111,7 @@ It is the speed relative to the fresh mixture. It is a constant for a specific m
 
 \subsection{Abiabatic flame temperature}
 
-It is the temperature of combustion products in an adiabatic system. It depends on the fuel and oxidizer nature and on the mixture ratio.
+It's the temperature of combustion products in an adiabatic system. It depends on the fuel and oxidizer nature and on the mixture ratio.
 
 \subsection{Mixture composition}
 
@@ -119,7 +119,7 @@ It is the temperature of combustion products in an adiabatic system. It depends 
     \item \textit{Mixture ratio} $\alpha$: amount of oxidizer, in mass or volume, linked to the fuel mass or volume unit.
     \item \textit{Equivalence ratio} $\phi$: mixture ratio normalized with respect to the stoichiometric ratio:
     \begin{equation}
-        \phi = \frac{(Ox/F)}{(Ox/F)}_{stech}
+        \phi = \frac{(F/Ox)}{(F/Ox)}_{stech}
     \end{equation}
     \item \textit{Air excess}: E.A.$=\phi-1$
 \end{itemize}
@@ -141,7 +141,7 @@ Flash point of a liquid fuel is the lowest temperature at which, an amount of fu
 \section{Fundamentals of chemical thermodynamics}
 
 Thermochemistry provide a quantitative assessment of the energy released in a chemical reaction.
-For a generic chemical equilibrium the mathematical formalism proposed by Penner is considered:
+For a generic chemical equilibrium the mathematical formalism proposed by $\textit{Penner}$ is considered:
 
 \begin{equation}
     \sum_{j=1}^{N} v_{i}^{'}M_{i} \rightarrow  \sum_{j=1}^{N} v_{i}^{''}M_{i}
@@ -157,11 +157,7 @@ For a generic chemical equilibrium the mathematical formalism proposed by Penner
 
 \subsection{Standard formation enthalpy $\Delta h_{f}^{0}$}
 
-The standard enthalpy of formation $\Delta h_{f}^{0}$ of a substance at a given temperature is defined as the enthalpy of the substance obtained at the standard thermodynamic state.
-\begin{itemize}
-    \item The standard thermodynamic state of a given substance is the ideal gas or liquid or solid state that the substance assumes at the conditions of $p=1$ atm and temperature T.
-\end{itemize}
-The standard enthalpy of formation is a state property, therefore we are only interested in the initial and final state.
+The standard enthalpy of formation $\Delta h_{f}^{0}$ of a substance is the change in enthalpy during the formation of 1 mole of the substance with all substances in their standard states. The standard enthalpy of formation is a state property, therefore we are only interested in the initial and final state.
 
 \subsection{Reaction enthalpy $\Delta h_{r}$}
 
@@ -169,9 +165,9 @@ The reaction enthalpy $(\Delta h_{r})_{T}$ at a given temperature T, is defined 
 \begin{equation}
     \sum_{j=1}^{N} v_{i}^{'}M_{i} \rightarrow  \sum_{j=1}^{N} v_{i}^{''}M_{i} + \Delta h_{r}
 \end{equation}
-If the final temperature of the products is the same of the temperature of the reactants, the energy balance does not include contributions linked to the change of temperature:
+If the final temperature of the products is the same of the temperature of the reactants, the energy balance does not include contributions linked to the change of temperature but only contributions of chemical nature (enthalpy of formation):
 \begin{equation}
-    \Delta H_{r}=(\Delta h)_{T}^{0}= \sum_{products} v_{j}^{''}(\Delta h_{f}^{0})_{T} -\sum_{reactants} v_{j}^{'}(\Delta h_{f}^{0})_{T}
+    \Delta h_{r}=(\Delta h)_{T}^{0}= \sum_{products} v_{j}^{''}(\Delta h_{f}^{0})_{T} -\sum_{reactants} v_{j}^{'}(\Delta h_{f}^{0})_{T}
 \end{equation}
 This equation states that if the standard enthalpy of formation is known, the reaction enthalpy of any reaction can be evaluated.
 \\
@@ -180,7 +176,7 @@ The energy released or absorbed has a definite value determined by the initial a
     \item for a reaction at constant pressure: $Q=\Delta H$
     \item for a reaction at constant volume: $Q=\Delta U$
 \end{itemize}
-the enthalpy totally involved, is given by:
+the thermochemical enthalpy totally involved, is given by:
 \begin{equation}
     \Delta h_{r}= \sum_{products} v_{j}^{''}[\Delta (h_{f}^{0})_{T_{0}}+(h_{T_{2}}-h_{T_{0}})] -\sum_{reactants} v_{j}^{'}[\Delta (h_{f}^{0})_{T_{0}}+(h_{T_{1}}-h_{T_{0}})]
 \end{equation}
