@@ -141,7 +141,7 @@ Flash point of a liquid fuel is the lowest temperature at which, an amount of fu
 \section{Fundamentals of chemical thermodynamics}
 
 Thermochemistry provide a quantitative assessment of the energy released in a chemical reaction.
-For a generic chemical equilibrium the mathematical formalism proposed by $\textit{Penner}$ is considered:
+For a generic chemical equilibrium the mathematical formalism proposed by \textbf{Penner} is considered:
 
 \begin{equation}
     \sum_{j=1}^{N} v_{i}^{'}M_{i} \rightarrow  \sum_{j=1}^{N} v_{i}^{''}M_{i}
@@ -162,13 +162,17 @@ The standard enthalpy of formation $\Delta h_{f}^{0}$ of a substance is the chan
 \subsection{Reaction enthalpy $\Delta h_{r}$}
 
 The reaction enthalpy $(\Delta h_{r})_{T}$ at a given temperature T, is defined as the thermal energy released or absorbed during the reaction:
+
 \begin{equation}
     \sum_{j=1}^{N} v_{i}^{'}M_{i} \rightarrow  \sum_{j=1}^{N} v_{i}^{''}M_{i} + \Delta h_{r}
 \end{equation}
+
 If the final temperature of the products is the same of the temperature of the reactants, the energy balance does not include contributions linked to the change of temperature but only contributions of chemical nature (enthalpy of formation):
+
 \begin{equation}
     \Delta h_{r}=(\Delta h)_{T}^{0}= \sum_{products} v_{j}^{''}(\Delta h_{f}^{0})_{T} -\sum_{reactants} v_{j}^{'}(\Delta h_{f}^{0})_{T}
 \end{equation}
+
 This equation states that if the standard enthalpy of formation is known, the reaction enthalpy of any reaction can be evaluated.
 \\
 The energy released or absorbed has a definite value determined by the initial and final state:
@@ -177,13 +181,14 @@ The energy released or absorbed has a definite value determined by the initial a
     \item for a reaction at constant volume: $Q=\Delta U$
 \end{itemize}
 the thermochemical enthalpy totally involved, is given by:
+
 \begin{equation}
     \Delta h_{r}= \sum_{products} v_{j}^{''}[\Delta (h_{f}^{0})_{T_{0}}+(h_{T_{2}}-h_{T_{0}})] -\sum_{reactants} v_{j}^{'}[\Delta (h_{f}^{0})_{T_{0}}+(h_{T_{1}}-h_{T_{0}})]
 \end{equation}
 
 \subsection{Reaction advancement}
 
-The reaction advancement, defined as "$z$", is a molar concentration change. It is $z=0$ at the beginning of the reaction, and $z=1$ at the end. Consequently, the reaction enthalpy becomes $z\Delta u$ for a constant volume or $z\Delta h$ for a constant pressure.
+The reaction advancement, defined as $z$, is a molar concentration change. It is $z=0$ at the beginning of the reaction, and $z=1$ at the end. Consequently, the reaction enthalpy becomes $z\Delta u$ for a constant volume or $z\Delta h$ for a constant pressure.
 
 \subsection{Fundamental thermochemical laws}
 
@@ -194,72 +199,93 @@ The reaction advancement, defined as "$z$", is a molar concentration change. It 
 
 \subsection{Bond energies}
 
-Bond energy is the energy required to break a bond between two atoms. Usually, this energy depends on the distance between atoms. It is necessary to consider the resonance in the molecule, which gives higher values of the standard formatioon enthalpy (it happens in the benzene $C_{6}H_{6}$).
+Bond energy is the energy required to break a bond between two atoms. Usually, this energy depends on the distance between atoms. It is necessary to consider the resonance in the molecule (delocalized electrons), which gives higher values of the standard formatioon enthalpy.
 
 \subsection{Adiabatic flame temperature}
 
 The equation for the computation of the entalpy of reaction is:
+
 \begin{equation}
     \Delta h_{r}= \sum_{products} v_{j}^{''}[\Delta (h_{f}^{0})_{T_{0}}+(h_{T_{2}}-h_{T_{0}})] -\sum_{reactants} v_{j}^{'}[\Delta (h_{f}^{0})_{T_{0}}+(h_{T_{1}}-h_{T_{0}})]
 \end{equation}
+
 if the heat released is used to heat the products, the products temperature $T_{2}$ is defined as \textit{adiabatic flame temperature}, therefore $(\Delta h_{r})=0$ and the equation becomes:
+
 \begin{equation}
     \sum_{products} v_{j}^{''}[\Delta (h_{f}^{0})_{T_{0}}+(h_{T_{2}}-h_{T_{0}})] =\sum_{reactants} v_{j}^{'}[\Delta (h_{f}^{0})_{T_{0}}+(h_{T_{1}}-h_{T_{0}})]
 \end{equation}
+
 if the products are known, it is possible to obtain the flame temperature.
 \\
 The heat released to the combustion products under adiabatic conditions is:
+
 \begin{equation}
-    -\Delta H_{r} = N_{tot}C_{P}\Delta T_{adiabatic}
+  -\Delta h_{r} = C_{P}\Delta T_{adiabatic}
 \end{equation}
 \begin{equation}
-    \Delta T_{adiabatic} = \frac{\Delta H_{r}}{C_{P}N_{tot}}
+    \Delta T_{adiabatic} = \frac{\Delta h_{r}}{C_{P}N_{tot}}
 \end{equation}
- For high temperature \textit{dissociation reactions} (strongly endothermic) develop. They produce other species ($CO, H_{2},...$), decreasing the global exothermicity of the reaction and the adiabatic flame temperature.
+
+For high temperature \textit{dissociation reactions} (strongly endothermic) develop. They produce other species ($CO, H_{2},...$), decreasing the global exothermicity of the reaction and the adiabatic flame temperature.
+
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/dissociation.png}
 \end{figure}
-Trend of the adiabatic flame temperature, significant increases of $T_{i}$ cause modesr increases of $T_{ad}$ due to dissociation reactions.
+
+In the picture it is possible to see the trend of the adiabatic flame temperature. Significant increases of $T_{i}$ cause modest increases of $T_{ad}$ due to \textit{dissociation reactions}.
 
 \subsection{Equilibrium ($K_{p}$)}
 
 Chemical equilibrium is one of the most important concepts in thermochemical propulsion. It assumes that at the exit from the combustion chamber, chemical phenomena behave as quasi-steady (much faster) with respect to the fluid dynamic phenomena:
+
 \begin{equation}
-    \frac{t_{ch}^{*}}{t_{fl}^{*}} << 1
+    \frac{t_{chemical}^{*}}{t_{fluid}^{*}} << 1
 \end{equation}
-A system is in a stable equilibrium when its state can be changed reversibly by an infinitesimmal amount. Such system obeys to the relationship:
+
+A system is in a stable equilibrium when its state can be changed reversibly by an infinitesimal amount. Such system obeys to the relationship:
+
 \begin{equation}
     TdS=de+pdV=dh-Vdp
 \end{equation}
+
 combustion processes are characterized by constant pressure and temperature, therefore the condition can be rewritten as:
+
 \begin{equation}
     d(e+pV-TS)_{p,T}=d(h-TS)_{p,T}=0
 \end{equation}
-where the \textit{Gibbs free energy}, is:
+
+where the \textbf{Gibbs free energy}, is:
+
 \begin{equation}
     F=(e+pV-TS)=h-TS
 \end{equation}
+
 Thus, the stable equilibrium condition of any chemical system working at constant temperature and pressure, is:
+
 \begin{equation}
     (dF)_{p,T}=0
 \end{equation}
-It is possible to show that the criterium of stable equilibrium to small perturbations leads to:
+
+The criterium of stable equilibrium to small perturbations leads to:
+
 \begin{equation}
     \Delta F^{0}(T)=-RTlnK_{p} = \sum_{j=1}^{N}(v_{j}^{''}-v_{j}^{'})F_{j}^{0}
 \end{equation}
 \begin{equation}
     K_{p}(T)= \frac{\prod_{j=1}^{N}(p_{j})^{v_{j}^{''}}}{\prod_{j=1}^{N}(p_{j})^{v_{j}^{'}}}
 \end{equation}
-$K_{p}$ is the \textit{equilibrium constant} and $p_{j}$ are the partial pressure of the mixture.
+
+$K_{p}$ is the \textbf{equilibrium constant} and $p_{j}$ are the partial pressure of the mixture.
 
 \subsection{The physical meaning of $K_{p}$}
 
-The more negative $\Delta F^{0}$ is, the larger is $K_{p}$. This means that the reaction is more spontaneous. When the free energy of the reactants and products is the same, the reaction has no tendency to proceed in either direction.
-The practical importance of $K_{p}$ is that it is independent on total pressure and can be a unique function of the temperature.
+The more negative $\Delta F^{0}$ is, the larger is $K_{p}$. This means that the reaction is more spontaneous. When the free energy of the reactants and products is the same, the reaction has no tendency to proceed in either direction. The practical importance of $K_{p}$ is that it is independent on total pressure and can be a unique function of the temperature.
+
 \begin{equation}
     \Delta F^{0}(T)=-RTlnK_{p}
 \end{equation}
+
 Since the variation $\Delta F^{0}$ depends only on temperature also the second member depends only on temperature.
 Consequently, for a given mixture it is possible to tabulate $K_{p}(T)$. This is an extremely interesting result for propulsion applications since the free energy change at the standard pressure $p=1 atm$ determines the equilibrium conditions at all other pressure.
 \begin{equation}
