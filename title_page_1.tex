@@ -276,18 +276,18 @@ The criterium of stable equilibrium to small perturbations leads to:
     K_{p}(T)= \frac{\prod_{j=1}^{N}(p_{j})^{v_{j}^{''}}}{\prod_{j=1}^{N}(p_{j})^{v_{j}^{'}}}
 \end{equation}
 
-$K_{p}$ is the \textbf{equilibrium constant} and $p_{j}$ are the partial pressure of the mixture.
+where $\Delta F^{0}(T)$ is the \textbf{variation of standard free energy} (1 atm, substances at standard thermodynamic state) and $K_{p}$ is the \textbf{equilibrium constant} and $p_{j}$ are the partial pressures of the mixture.
 
 \subsection{The physical meaning of $K_{p}$}
 
-The more negative $\Delta F^{0}$ is, the larger is $K_{p}$. This means that the reaction is more spontaneous. When the free energy of the reactants and products is the same, the reaction has no tendency to proceed in either direction. The practical importance of $K_{p}$ is that it is independent on total pressure and can be a unique function of the temperature.
+The more negative $\Delta F^{0}$ is, the larger is $K_{p}$. This means that the reaction is more spontaneous. When the free energy of the reactants and products is the same, the reaction has no tendency to proceed in either direction. The practical importance of $K_{p}$ is that it is independent on total pressure and can be a unique function of the temperature:
 
 \begin{equation}
     \Delta F^{0}(T)=-RTlnK_{p}
 \end{equation}
 
 Since the variation $\Delta F^{0}$ depends only on temperature also the second member depends only on temperature.
-Consequently, for a given mixture it is possible to tabulate $K_{p}(T)$. This is an extremely interesting result for propulsion applications since the free energy change at the standard pressure $p=1 atm$ determines the equilibrium conditions at all other pressure.
+Consequently, for a given mixture it is possible to tabulate $K_{p}(T)$. This is an extremely interesting result for propulsion applications since the free energy change at the standard pressure $p=1$ atm determines the equilibrium conditions at all other pressure.
 \begin{equation}
     \Delta F_{p,T}=0
 \end{equation}
@@ -321,7 +321,7 @@ We suppose the combustion chamber as an open thermodynamic system, where chemica
 \end{equation}
 
 $T_{j}$ is the temperature of injection of $n_{j}$ moles of reactants in the combustion chamber, and $T_{c}$ is the common temperature of exit from the combustion chamber of the $n_{j}$ moles of products.
-$T_{ref}$ is the reference table of the available tables.\\
+$T_{ref}$ is the reference temperature of the available tables.\\
 The energy conservation requires:
 
 \begin{equation}
@@ -330,8 +330,7 @@ The energy conservation requires:
     \sum_{j=1}^{N}n_{j}^{''}[(\Delta h_{f}^{0})_{T_{ref}}+(h_{T_{c}}^{0}-h_{T_{ref}}^{0})]_{j}+\Delta h_{ext}
 \end{equation}
 
-where $h_{T}^{0}-h_{T_{ref}}^{0} = \int_{T_{ref}}^{T} Cp_{j}(T)dT$ are tabulated values of the molar thermal enthalpy.\\
-The temperature $T_{C}$ resulting from the conservation energy equation is called \textit{flame temperature}. It increases if enthalpy lost to the environment decreases. If $\Delta h_{ext}=0$, the adiabatic flame temperature is the maximum admissible temperature in the combustion chamber.
+where $h_{T}^{0}-h_{T_{ref}}^{0} = \int_{T_{ref}}^{T} Cp_{j}(T)dT$ are tabulated values of the molar thermal enthalpy. The temperature $T_{C}$ resulting from the conservation energy equation is called \textbf{flame temperature}. It increases if enthalpy lost to the environment decreases. If $\Delta h_{ext}=0$, the adiabatic flame temperature is the maximum admissible temperature in the combustion chamber.
 
 \subsubsection{Available and absorbed enthalpy}
 
@@ -355,12 +354,12 @@ is the enthalpy absorbed to warm up the combustion products.
 \includegraphics[width=0.6\textwidth]{figures/availablevsabsorbed.png}
 \end{figure}
 
-Increasing combustion temperature implies a fall in the available enthalpy due to molecular dissociation and the simultaneous growth of the absorbed enthalpy.\\
+Increasing combustion temperature implies a fall in the available enthalpy due to molecular dissociation and the simultaneous growth of the absorbed enthalpy.
 These phenomena, show a limit of operations for all thermal propulsion system which is approximately at $5000 K$.
 
 \subsubsection{Mixture composition}
 
-In this case it is knownn the working pressure $p_{c}$, $T_{j}$, $T_{c}$.
+This is the second part of the uncoupled problem. In this case it is known the working pressure $p_{c}$, $T_{j}$, $T_{c}$. But the mixture composition is unknown:
 
 \begin{equation}
     n_{j}^{'} \rightarrow n_{j}^{''}?
